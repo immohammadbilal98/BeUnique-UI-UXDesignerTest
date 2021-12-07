@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+body {
+  padding: 0%;
+  margin: 0%;
+  overflow-x:hidden;
+}
+
+
+/* FONT STYLES ===============================================================================*/
+p,li{
+  font-family: 'Arvo', serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Source Serif Pro', serif;
+}
+
+.nav-item{
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* ===================================================================================================================================== */
+/* ========================================================== HOME ===================================================================== */
+/* ===================================================================================================================================== */
+
+/* NAVIGATION ===============================================================================*/
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color;
+    /* transition: background-color .5s ease; */
+    z-index: 1000;
+    font-weight: 700;
+}
+
+.navbar-brand{
+  filter: brightness(1.2);  
+}
+
+  
+.nav a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-list{
+  font-size: 15px;
+}
+
+@media (max-width:1078px) {
+  .nav-list{
+    font-size: 11px;
+  }   
+}
+
+/*Apply styles after scroll*/
+.scrolling-active {
+  background-color: #fff;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, .1);
+}
+
+.scrolling-active .nav a{
+  color: #0c0c0c;
+}
+
+.nav-light .navbar-toggler {
+  color: rgb(9 52 103);
+  border-color: rgb(255 255 255);
+}    
+
+.scrolling-active .nav-light .navbar-toggler {
+  color: rgb(255 255 255 / 55%);
+  border-color: rgb(0 0 0 / 51%);
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: box-shadow .15s ease-in-out;
+}
+
+/* .navbar-toggler-icon {
+  background-image: url("https://img.icons8.com/ios/50/000000/menu--v4.png");
+} */
+
+.dropdown-menu{
+  /* background-color: rgb(107 164 199); */
+  border-radius: 0rem;
+}
+
+.nav-item{
+  margin-right: 5px;
+}
+
+ul.dropdown-menu.show li{
+  border-bottom: 1px solid #d5e1e9;
+}
+
+a.dropdown-item{
+  color: #000000;
+}
+
+/* Hamburger */
+.container-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 32px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  margin: 4px -1px;
+  transition: 0.4s;
+}
+
+.scrolling-active .bar1, .scrolling-active .bar2, .scrolling-active .bar3{
+  background-color: rgb(0, 0, 0);
+}
+
+.bar1,.bar2{
+  margin-bottom: 8px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}  
+/* ========================================================================================== */
+/* CUSTOMIZE THE NAVBAR FOR HOVER, ACTIVE and FOCUS
+-------------------------------------------------- */
+.nav-hover:hover{
+  background-color:#130f0f;
+  padding:29px 8px;
+  color:#ffffff;
+}
+.nav-hover:active{
+  color: #0a58ca;
+}
+
+ul li a.dropdown-item:link{
+  color: #0a58ca;
+}
+
+/* Dropdown Menu */
+.nav-hover-dropdown:active{
+  background-color:#130f0f;
+  padding:29px 8px;
+  color: #0a58ca;
+}
+
+.nav-hover-dropdown:hover{
+  background-color:#130f0f;
+  padding:29px 8px;
+}
+
+.nav-hover-dropdown:first-child{
+  color:#ffffff;
+}
+
+li.nav-item.dropdown a.nav-link.nav-hover-dropdown.dropdown-toggle.show{
+  color: #0a58ca;
+  background-color:#130f0f;
+  padding:29px 8px;
+}
+
+/* li.nav-item.dropdown a.nav-link.nav-hover-dropdown.dropdown-toggle.show,li.nav-item.dropdown a.nav-link.nav-hover-dropdown.dropdown-toggle.show:hover {
+    background-color:#130f0f;
+    padding:29px 8px;
+} */
+
+/* .nav-hover-dropdown:focus{
+  color: #0a58ca;  
+}
+.nav-hover-dropdown:visited{
+  color: #ffffff;  
+} */
+
+
+
+/* For Scrolling Active */
+.scrolling-active .nav-hover:hover{
+  color:#ffffff;
+}
+
+.scrolling-active .nav-hover:active{
+  color:#0a58ca;
+}
+
+.scrolling-active ul li a.dropdown-item:link{
+  color: #0a58ca;
+}
+
+/* Dropdown Menu */
+.scrolling-active .nav-hover-dropdown:hover{
+  color:#ffffff;
+}
+
+
+/* ========================================================================================== */
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+/* .carousel {
+  margin-bottom: 4rem;
+} */
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+  top: 211px;
+  /* background: rgba(232, 238, 233, 0.842); */
+  color: #000000;
+  position: relative;
+  /* left: 67px; */
+  width: 595px;
+  padding: 18px 33px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 42rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* min-width: 100%; */
+  height: 42rem;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+/* ========================================================================================== */
+
+
+/* WHY USE SYNERGY ============================================================================*/
+.weight-content-founder{
+  color: #33893b;;
+}
+
+#Founder{
+  background-color: #84c98b;
+}
+
+#footer{
+  background-color: #57c962;
+}
+
+.link-footer{
+  color: #57c962;
+}
